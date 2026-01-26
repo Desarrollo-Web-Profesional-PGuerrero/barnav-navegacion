@@ -7,6 +7,7 @@ import { PiShoppingCartLight } from "react-icons/pi"
 /* eslint-disable no-unused-vars */
 import { motion } from "motion/react"
 /* eslint-enable no-unused-vars */
+import { Link } from 'react-router-dom' 
 import MenuResponsivo from './MenuResponsivo'
 
 const Navbar = () => {
@@ -21,8 +22,10 @@ const Navbar = () => {
           <div className="text-2xl flex items-center gap-2 uppercase">
             <br />
             <FaSkullCrossbones className="text-red-500 text-3xl" />
-            <p className="text-white">MUNDO</p>
-            <p className="text-red-500">GRIMM</p>
+            <Link to="/" className="flex items-center gap-2">
+              <p className="text-white">MUNDO</p>
+              <p className="text-red-500">GRIMM</p>
+            </Link>
             <FaGhost className="text-blue-400 text-2xl ml-2" />
           </div>
 
@@ -36,12 +39,12 @@ const Navbar = () => {
                   transition={{ duration: 0.2 }}
                   className="inline-block"
                 >
-                  <a 
-                    href={item.url} 
+                  <Link 
+                    to={item.url} 
                     className="inline-block py-1 px-3 hover:text-red-500 font-semibold"
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -65,17 +68,19 @@ const Navbar = () => {
               <PiShoppingCartLight />
             </motion.button>
             
-            <motion.button 
-              whileHover={{ 
-                scale: 1.05, 
-                boxShadow: "0 0 20px rgba(239, 68, 68, 0.5)",
-                backgroundColor: "#dc2626"
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="hover:bg-red-800 font-semibold rounded-md text-white bg-red-700 px-6 py-2 duration-300 hidden md:block"
-            >
-              Acceso Grimm
-            </motion.button>
+            <Link to="/login">
+              <motion.button 
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0 0 20px rgba(239, 68, 68, 0.5)",
+                  backgroundColor: "#dc2626"
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="hover:bg-red-800 font-semibold rounded-md text-white bg-red-700 px-6 py-2 duration-300 hidden md:block"
+              >
+                Acceso Grimm
+              </motion.button>
+            </Link>
             <br />
             
             {/* Botón menú móvil */}

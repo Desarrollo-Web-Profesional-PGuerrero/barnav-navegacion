@@ -1,4 +1,3 @@
-// src/data/data.js
 const navbarLinks = [
   {
     id: 1,
@@ -14,7 +13,7 @@ const navbarLinks = [
   },
   {
     id: 3,
-    name: "cursos",  // Mantener "cursos" pero será "Temporadas"
+    name: "cursos",
     title: "Temporadas",
     url: "/temporadas"
   },
@@ -29,7 +28,8 @@ const navbarLinks = [
     name: "galeria",
     title: "Galería",
     url: "/galeria"
-  }
+  },
+ 
 ]
 
 export { navbarLinks }

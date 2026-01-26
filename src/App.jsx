@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './componentes/Navbar'
-import Banner from './componentes/Banner'
 import Home from './componentes/secciones/Home'
 import About from './componentes/secciones/About'
 import Cursos from './componentes/secciones/Cursos'
 import Bestias from './componentes/secciones/Bestias'
 import Galeria from './componentes/secciones/Galeria'
+import Login from './componentes/secciones/Login'
 
 const App = () => {
   return (
@@ -20,6 +20,7 @@ const App = () => {
           <Route path="/temporadas" element={<Cursos />} />
           <Route path="/bestias" element={<Bestias />} />
           <Route path="/galeria" element={<Galeria />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
