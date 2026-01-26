@@ -1,0 +1,27 @@
+# docker-compose.yml SIMPLIFICADO
+services:
+  # Desarrollo
+  grimm-dev:
+    image: node:20-alpine
+    container_name: grimm-dev
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    stdin_open: true
+    tty: true
+
+  # Producción
+  grimm-prod:
+    build: .
+    container_name: grimm-prod
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
