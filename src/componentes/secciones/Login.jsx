@@ -80,7 +80,7 @@ const Login = () => {
                   className="space-y-4"
                 >
                   <div>
-                    <label className="block text-gray-400 mb-2">Nombre</label>
+                    <label className="block text-gray-400 mb-2">Nombre Completo</label>
                     <div className="relative">
                       <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
                       <input
