@@ -1,20 +1,35 @@
 const navbarLinks = [
- {
- id: 1,
- name: "Home",
- title: "Inicio",
- url: "/home"
- },{
- id: 2,
- name: "About",
- title: "Acerca de",
- url: "/about"
+  {
+    id: 1,
+    name: "home",
+    title: "Inicio",
+    url: "/home"
   },
- {
- id: 3,
- name: "courses",
- title: "Cursos",
- url: "/courses"
- }
-];
-export { navbarLinks };
+  {
+    id: 2,
+    name: "personajes",
+    title: "Personajes",
+    url: "/personajes"
+  },
+  {
+    id: 3,
+    name: "cursos",
+    title: "Temporadas",
+    url: "/temporadas"
+  },
+  {
+    id: 4,
+    name: "bestias",
+    title: "Bestias",
+    url: "/bestias"
+  },
+  {
+    id: 5,
+    name: "galeria",
+    title: "Galería",
+    url: "/galeria"
+  },
+ 
+]
+
+export { navbarLinks }
